@@ -1,0 +1,9 @@
+{
+	"name": "Odoo 14",
+	"dockerComposeFile": [
+		"../docker-compose.yml"
+	],
+	"service": "odoo",
+	"workspaceFolder": "/mnt/extra-addons"
+
+}
