@@ -9,13 +9,13 @@ docker compose down -v
 # Para realizar o download ou pull das imagens antes de subir o ambiente, rode o comando abaixo.
 docker compose pull odoo db
 
-# Para chegar as imagens existentes em sua maquina.
+# Para checar as imagens existentes em sua maquina.
 docker images
 
 # Para mostrar os containers ou serviços que estão rodando.
 docker compose ps
 
-# Para rodar um serviço ( container em particular ).
+# Para rodar um serviço ( container ).
 docker compose start odoo
 ```
 
