@@ -4,6 +4,16 @@
 		"../docker-compose.yml"
 	],
 	"service": "odoo",
-	"workspaceFolder": "/mnt/extra-addons"
+	"workspaceFolder": "/mnt/extra-addons",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"ms-python.python",
+				"scapigliato.vsc-odoo-development",
+				"redhat.vscode-xml",
+				"mechatroner.rainbow-csv"
+			]
+		}
+	}
 
 }

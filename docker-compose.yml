@@ -9,6 +9,8 @@ services:
     ports:
       - "8069:8069"
     command: sleep infinity
+    volumes:
+    - ./addons:/mnt/extra-addons
 
   db:
     image: postgres:13
