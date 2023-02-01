@@ -4,16 +4,21 @@
 		"../docker-compose.yml"
 	],
 	"service": "odoo",
-	"workspaceFolder": "/mnt/extra-addons",
+	"workspaceFolder": "/usr/lib/python3/dist-packages/odoo",
 	"customizations": {
 		"vscode": {
 			"extensions": [
 				"ms-python.python",
 				"scapigliato.vsc-odoo-development",
 				"redhat.vscode-xml",
-				"mechatroner.rainbow-csv"
+				"mechatroner.rainbow-csv",
+				"mstuttgart.odoo-snippets",
+				"christian-kohler.path-intellisense",
+				"esbenp.prettier-vscode"
 			]
 		}
-	}
+	},
+
+	"postCreateCommand": "mv /usr/lib/python3/dist-packages/odoo/extra-addons/.vscode .vscode"
 
 }

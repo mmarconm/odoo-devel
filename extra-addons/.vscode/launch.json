@@ -11,7 +11,9 @@
             "program": "/usr/bin/odoo",
             "args": [
                 "-c",
-                "/mnt/extra-addons/odoo.conf"
+                "/mnt/extra-addons/odoo.conf",
+                "--dev",
+                "xml"
             ],
             "justMyCode": false,
             "console": "integratedTerminal"
