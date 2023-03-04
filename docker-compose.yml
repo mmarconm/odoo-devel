@@ -13,8 +13,14 @@ services:
     - ./addons:/mnt/extra-addons
 
   db:
-    image: postgres:13
+    image: postgres:14
     environment:
       - POSTGRES_DB=postgres
       - POSTGRES_PASSWORD=odoo
       - POSTGRES_USER=odoo
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080
