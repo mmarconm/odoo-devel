@@ -19,6 +19,5 @@
 		}
 	},
 
-	"postCreateCommand": "mv /usr/lib/python3/dist-packages/odoo/extra-addons/.vscode .vscode"
-
+	"postCreateCommand": "cp -r /usr/lib/python3/dist-packages/odoo/extra-addons/.vscode .vscode"
 }
