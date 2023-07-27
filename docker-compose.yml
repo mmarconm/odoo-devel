@@ -20,8 +20,18 @@ services:
       - POSTGRES_PASSWORD=odoo
       - POSTGRES_USER=odoo
 
-  adminer:
-    image: adminer
-    restart: unless-stopped
+  pgadmin:
+    image: dpage/pgadmin4
+    environment:
+        - PGADMIN_DEFAULT_PASSWORD=odoo
+        - PGADMIN_DEFAULT_EMAIL=odoo@odoo.home
     ports:
-      - 8080:8080
+        - 8080:80
+    depends_on:
+        - db
+
+  # adminer:
+  #   image: adminer
+  #   restart: unless-stopped
+  #   ports:
+  #     - 8080:8080
