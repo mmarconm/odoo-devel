@@ -12,9 +12,9 @@
 				"scapigliato.vsc-odoo-development",
 				"redhat.vscode-xml",
 				"mechatroner.rainbow-csv",
-				"mstuttgart.odoo-snippets",
 				"christian-kohler.path-intellisense",
-				"esbenp.prettier-vscode"
+				"esbenp.prettier-vscode",
+				"jigar-patel.OdooSnippets"
 			]
 		}
 	},
