@@ -1,6 +1,5 @@
-version: '3.1'
+version: "3.1"
 services:
-
   odoo:
     user: root
     image: odoo:16.0
@@ -10,11 +9,11 @@ services:
       - "8069:8069"
     command: sleep infinity
     volumes:
-    - ./extra-addons:/usr/lib/python3/dist-packages/odoo/extra-addons:cached
-    - ./config:/usr/lib/python3/dist-packages/odoo/config:cached
+      - ./extra-addons:/usr/lib/python3/dist-packages/odoo/extra-addons:cached
+      - ./config:/usr/lib/python3/dist-packages/odoo/config:cached
 
   db:
-    image: postgres:14
+    image: postgres:15
     environment:
       - POSTGRES_DB=postgres
       - POSTGRES_PASSWORD=odoo
@@ -23,12 +22,12 @@ services:
   pgadmin:
     image: dpage/pgadmin4
     environment:
-        - PGADMIN_DEFAULT_PASSWORD=odoo
-        - PGADMIN_DEFAULT_EMAIL=odoo@odoo.home
+      - PGADMIN_DEFAULT_PASSWORD=odoo
+      - PGADMIN_DEFAULT_EMAIL=odoo@odoo.home
     ports:
-        - 8080:80
+      - 8080:80
     depends_on:
-        - db
+      - db
 
   # adminer:
   #   image: adminer
