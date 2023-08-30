@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "name": "Odoo 14",
   "dockerComposeFile": ["../docker-compose.yml"],
   "service": "odoo",
@@ -14,4 +15,27 @@
     }
   },
   "postCreateCommand": "pip install autopep8 ipython black yapf"
+=======
+	"name": "Odoo 14",
+	"dockerComposeFile": [
+		"../docker-compose.yml"
+	],
+	"service": "odoo",
+	"workspaceFolder": "/usr/lib/python3/dist-packages/odoo",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"ms-python.python",
+				"scapigliato.vsc-odoo-development",
+				"redhat.vscode-xml",
+				"mechatroner.rainbow-csv",
+				"christian-kohler.path-intellisense",
+				"esbenp.prettier-vscode",
+				"jigar-patel.OdooSnippets"
+			]
+		}
+	},
+
+	"postCreateCommand": "cp -r /usr/lib/python3/dist-packages/odoo/extra-addons/.vscode .vscode"
+>>>>>>> testing
 }
