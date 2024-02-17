@@ -1,41 +1,128 @@
 {
-<<<<<<< HEAD
-  "name": "Odoo 14",
+  // Marcelo Marcon - @2024
+  "name": "Odoo",
   "dockerComposeFile": ["../docker-compose.yml"],
   "service": "odoo",
-  "workspaceFolder": "/mnt/extra-addons",
+  "workspaceFolder": "/usr/lib/python3/dist-packages/odoo",
   "customizations": {
     "vscode": {
-      "extensions": [
-        "ms-python.python",
-        "scapigliato.vsc-odoo-development",
-        "redhat.vscode-xml",
-        "mechatroner.rainbow-csv"
-      ]
-    }
-  },
-  "postCreateCommand": "pip install autopep8 ipython black yapf"
-=======
-	"name": "Odoo 14",
-	"dockerComposeFile": [
-		"../docker-compose.yml"
-	],
-	"service": "odoo",
-	"workspaceFolder": "/usr/lib/python3/dist-packages/odoo",
-	"customizations": {
-		"vscode": {
-			"extensions": [
-				"ms-python.python",
-				"scapigliato.vsc-odoo-development",
-				"redhat.vscode-xml",
-				"mechatroner.rainbow-csv",
-				"christian-kohler.path-intellisense",
-				"esbenp.prettier-vscode",
-				"jigar-patel.OdooSnippets"
-			]
-		}
-	},
-
-	"postCreateCommand": "cp -r /usr/lib/python3/dist-packages/odoo/extra-addons/.vscode .vscode"
->>>>>>> testing
+      "settings": {
+        "workbench.startupEditor": "newUntitledFile",
+        "debug.console.fontSize": 14,
+        "editor.mouseWheelZoom": true,
+        "editor.fontLigatures": true,
+        "explorer.confirmDelete": false,
+        "files.eol": "\n",
+        "editor.renderLineHighlight": "all",
+        "workbench.colorCustomizations": {
+          "editor.lineHighlightBackground": "#7e7e7e27"
+        },
+        "terminal.integrated.tabs.enabled": true,
+        "terminal.integrated.enableMultiLinePasteWarning": "never",
+        "terminal.integrated.cursorStyle": "underline",
+        "terminal.integrated.fontFamily": "JetBrains Mono, Fira Code Retina, monospace",
+        "terminal.integrated.persistentSessionReviveProcess": "never",
+        "terminal.integrated.enablePersistentSessions": false,
+        "debug.console.fontFamily": "JetBrainsMono NF,JetBrains Mono, Fira Code Retina, monospace",
+        "files.watcherExclude": {
+          "**/.git/objects/**": true,
+          "**/.git/subtree-cache/**": true,
+          "**/node_modules/*/**": true
+        },
+        "files.exclude": {
+          ".vscode": true,
+          "**/__pycache__/": true,
+          "**/.code-workspace": true,
+          "**/.git": false,
+          "**/.git/**": true,
+          "**/env": true,
+          "venv": true
+        },
+        "editor.wordWrapColumn": 102,
+        "editor.minimap.maxColumn": 102,
+        "editor.fontFamily": "Fira Code Retina, JetBrains Mono Regular",
+        "editor.fontWeight": "500",
+        "editor.cursorStyle": "underline",
+        "editor.wordWrap": "on",
+        "editor.parameterHints.enabled": true,
+        "editor.quickSuggestions": {
+          "comments": "on",
+          "strings": "on",
+          "other": "on"
+        },
+        "editor.suggestOnTriggerCharacters": true,
+        "editor.rulers": [102, 102],
+        "explorer.sortOrder": "type",
+        "[python]": {
+          "editor.insertSpaces": true,
+          "editor.tabSize": 4,
+          "editor.formatOnSave": true
+        },
+        "[javascript]": {
+          "editor.insertSpaces": true,
+          "editor.tabSize": 4,
+          "editor.defaultFormatter": "esbenp.prettier-vscode"
+        },
+        "[jsonc]": {
+          "editor.defaultFormatter": "esbenp.prettier-vscode"
+        },
+        "[yaml]": {},
+        "[json]": {
+          "editor.defaultFormatter": "vscode.json-language-features"
+        },
+        "editor.accessibilitySupport": "off",
+        "explorer.confirmDragAndDrop": false,
+        "[html]": {
+          "editor.defaultFormatter": "esbenp.prettier-vscode"
+        },
+        "editor.linkedEditing": true,
+        "[css]": {
+          "editor.defaultFormatter": "esbenp.prettier-vscode"
+        },
+        "git.openRepositoryInParentFolders": "never",
+        "[xml]": {
+          "editor.defaultFormatter": "redhat.vscode-xml"
+        },
+        "javascript.updateImportsOnFileMove.enabled": "always",
+        "typescript.updateImportsOnFileMove.enabled": "always",
+        "editor.codeActionsOnSave": {},
+        "[xslt]": {
+          "editor.semanticHighlighting.enabled": true
+        },
+        "workbench.tree.indent": 20,
+        "terminal.integrated.altClickMovesCursor": false,
+        "terminal.integrated.autoReplies": {},
+        "terminal.integrated.env.windows": {},
+        "terminal.integrated.env.linux": {},
+        "explorer.compactFolders": false,
+        "terminal.integrated.shellIntegration.decorationsEnabled": "never",
+        "window.commandCenter": false,
+        "editor.showFoldingControls": "always",
+        "editor.folding": true,
+        "editor.foldingStrategy": "indentation",
+        "workbench.editorAssociations": {
+          "*.yaml": "default"
+        },
+        "editor.minimap.renderCharacters": false,
+        "editor.formatOnSave": true,
+        "editor.fontVariations": false,
+        "python.terminal.launchArgs": []
+      }
+    },
+    "extensions": [
+      "christian-kohler.path-intellisense",
+      "eeyore.yapf",
+      "esbenp.prettier-vscode",
+      "jigar-patel.OdooSnippets",
+      "mechatroner.rainbow-csv",
+      "ms-python.autopep8",
+      "ms-python.black-formatter",
+      "ms-python.python",
+      "redhat.vscode-xml",
+      "scapigliato.vsc-odoo-development"
+    ]
+  }
+  // Uncomment this part if want to use default odoo image from the commnunity.
+  // Uncomment also extra-addons volumes section in docker-compose.yml file
+  // "postCreateCommand": "cp -r /usr/lib/python3/dist-packages/odoo/extra-addons/.vscode .vscode"
 }
